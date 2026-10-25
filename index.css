@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+
+    background-color:white;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+
+/* ==============================
+   2. SCOREBOARD
+============================== */
+
+.scoreboard {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 16px;
+}
+
+.score {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.score span {
+    font-size: 16px;
+    text-align: center;
+}
+
+#player-score,
+#computer-score {
+    width: 100px;
+    max-width: 100%;
+    min-height: 35px;
+
+    border: 1px solid black;
+    border-radius: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==============================
+   3. MAIN GAME CONTAINER
+============================== */
+
+.game {
+    width: 80%;
+    max-width: 600px;
+    min-height: 400px;
+
+    margin: 10px auto;
+    padding: 20px 12px;
+
+    background-image: linear-gradient(
+        331deg,
+        white 0%,
+        lightblue 30%
+    );
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==============================
+   4. PLAYER AND COMPUTER CHOICES
+============================== */
+
+.choices {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+#player-choice,
+#computer-choice {
+    width: 46%;
+    max-width: 130px;
+    min-width: 0;
+    height: 40px;
+
+    border: 1px solid black;
+
+    letter-spacing: 4px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-wrap: anywhere;
+}
+
+#computer-choice {
+    letter-spacing: 3px;
+}
+
+
+/* ==============================
+   5. GAME RESULT
+============================== */
+
+#result {
+    width: 100px;
+    max-width: 100%;
+    min-height: 40px;
+
+    margin: 20px auto;
+
+    font-weight: 1000;
+    letter-spacing: 4px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==============================
+   6. GAME BUTTONS
+============================== */
+
+.buttons {
+    width: 100%;
+    margin-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.buttons button {
+    width: 130px;
+    max-width: 100%;
+    min-height: 40px;
+    padding: 4px;
+
+    border: 1px solid black;
+    border-radius: 0;
+
+    background: transparent;
+    color: inherit;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: 4px;
+
+    text-align: center;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==============================
+   7. TABLETS
+============================== */
+
+@media screen and (max-width: 768px) {
+    .scoreboard,
+    .game {
+        width: 90%;
+    }
+
+    .game {
+        padding: 18px 12px;
+    }
+
+    .choices {
+        gap: 10px;
+    }
+
+    #player-choice,
+    #computer-choice {
+        letter-spacing: 3px;
+    }
+}
+
+
+/* ==============================
+   8. MOBILE PHONES
+============================== */
+
+@media screen and (max-width: 480px) {
+    body {
+        padding-top: 12px;
+        font-size: 18px;
+    }
+
+    .scoreboard,
+    .game {
+        width: 94%;
+    }
+
+    .scoreboard {
+        gap: 10px;
+    }
+
+    .score span {
+        font-size: 15px;
+    }
+
+    #player-score,
+    #computer-score {
+        width: 90px;
+    }
+
+    .game {
+        min-height: 400px;
+        padding: 16px 8px;
+    }
+
+    .choices {
+        gap: 8px;
+    }
+
+    #player-choice,
+    #computer-choice {
+        height: 40px;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    #result {
+        margin: 18px auto;
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+
+    .buttons button {
+        width: 130px;
+        min-height: 40px;
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+}
+
+
+/* ==============================
+   9. VERY SMALL PHONES
+============================== */
+
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 16px;
+    }
+
+    .scoreboard,
+    .game {
+        width: 96%;
+    }
+
+    .scoreboard {
+        gap: 6px;
+    }
+
+    #player-score,
+    #computer-score {
+        width: 80px;
+    }
+
+    .game {
+        padding: 12px 5px;
+    }
+
+    .choices {
+        gap: 5px;
+    }
+
+    #player-choice,
+    #computer-choice {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    #result {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .buttons button {
+        width: 120px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+}
+
